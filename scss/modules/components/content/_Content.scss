@@ -1,0 +1,59 @@
+.Cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    background: rgb(228, 228, 228);
+}
+
+.avatar {    
+    width:100px;
+    height:100px;
+    border-radius:150px;    
+}
+
+.Marco {
+    border: gray 5px solid;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.Contenedor-Fichas {
+    font-size: 12px;
+}
+
+.Ficha {
+    display: flex;
+    // flex-direction: row;
+    padding: 10px;
+
+    &-Perrito {
+        width: 22%;
+        margin: 5px;
+        padding: 10px;
+    
+        border: solid gray 1px;
+        box-shadow: 5px 7px 10px #888888;
+
+        &-Cabecera {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &-Cuerpo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
+
+            &-Informacion {
+                text-align: justify;
+            }
+        }
+
+        &-Cuerpo p {
+            margin: 5px;
+        }
+    }
+}
+

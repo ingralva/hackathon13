@@ -1,0 +1,73 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 0px;
+
+    &-Logo {
+
+        &-Texto-Link {            
+            text-decoration: none;
+            display: flex;
+            
+            &-Logo {
+                padding-right: 10px;
+            }
+
+            &__Texto1 {
+                font-family: 'Georgia Pro Black', Georgia, serif;
+                font-size: 1.8em;
+                font-weight: 600;
+                color: #233985
+                ;
+            }
+
+            &__Texto2 {
+                font-family: 'Verdana Pro Black', Verdana, Tahoma;
+                font-size: 1.1em;
+                font-weight: 800;
+                color: #4BBDE0                ;
+            }
+        }
+    }
+
+    &-Menu {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    &-ListItem {
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    &-Item {
+        padding: .5em;
+        list-style-type: none;
+    }
+
+    &-Link {
+        text-decoration: none;
+        font-size: 1.1em;
+        color: black;
+    }
+
+    &-Selected {
+        font-weight: bold;
+        color: #28476E;
+    }
+
+    &-About {
+        background: $primer-Color-Fondo;
+
+    }
+}
+
+.About {
+    padding: 3rem 0 3rem 0;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    color: $primer-Color;
+}
