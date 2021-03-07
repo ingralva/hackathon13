@@ -47,9 +47,7 @@ function cargaDatosOnLoad(e){
             // perritos = data;
             // console.log(perritos);
 
-            cargarFichasPerritos(data);
-
-            
+            cargarFichasPerritos(data);            
 
         })
         .catch( error => {
@@ -74,7 +72,9 @@ console.log(perritos[perritos.length-1].id + 1);
     // console.log(perrito);
     perritos.push(perrito);
 
-    cargarFichasPerritos(perritos)
+    cargarFichasPerritos(perritos);
+
+    limpiarFormulario();
 }
 
 function cargarFichasPerritos(datos){
@@ -166,20 +166,23 @@ function eliminarPerrito(e){
 function editarPerrito(e){
     e.preventDefault();
 
-    // console.log(e);
-    const id = 1;
-    const imagen = "perrito03";
-    const nombre = document.getElementById('txtNombre').value;
-    const telefono = document.getElementById('txtTelefono').value;
-    const correo = document.getElementById('txtCorreo').value;
-    const pais = document.getElementById('txtPais').value;
-    const informacion = document.getElementById('txtInformacion').value;
-
-    const perrito = {id, imagen, nombre, telefono, correo, pais, informacion};
-
     perritos[posEditar].nombre = document.getElementById('txtNombre').value;
+    perritos[posEditar].telefono = document.getElementById('txtTelefono').value;
+    perritos[posEditar].correo = document.getElementById('txtCorreo').value;
+    perritos[posEditar].pais = document.getElementById('txtPais').value;
+    perritos[posEditar].informacion = document.getElementById('txtInformacion').value;
 
     console.log(perritos);
 
     cargarFichasPerritos(perritos);
+
+    limpiarFormulario();
+}
+
+function limpiarFormulario(){
+    document.getElementById('txtNombre').value = "";
+    document.getElementById('txtTelefono').value = "";
+    document.getElementById('txtCorreo').value = "";
+    document.getElementById('txtPais').value = "";
+    document.getElementById('txtInformacion').value = "";
 }
